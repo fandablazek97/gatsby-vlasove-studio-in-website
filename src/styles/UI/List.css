@@ -1,0 +1,34 @@
+.ui-list {
+  --list-ml: 1.15rem;
+  --list-item-pl: 0.6em;
+  --list-item-my: 0.6em;
+  --list-marker-color: var(--color-primary);
+  --list-marker-weight: inherit;
+  --list-marker-size: 1.1em;
+
+  line-height: var(--base-line-height);
+
+  &:not([class*="ml"]) {
+    margin-left: var(--list-ml);
+  }
+
+  & li {
+    padding-left: var(--list-item-pl);
+    margin-top: var(--list-item-my);
+    margin-bottom: var(--list-item-my);
+
+    &::marker {
+      color: hsl(var(--list-marker-color));
+      font-size: var(--list-marker-size);
+      font-weight: var(--list-marker-weight);
+    }
+  }
+}
+
+ul.ui-list:not([class*="list-"]) {
+  list-style-type: disc;
+}
+
+ol.ui-list:not([class*="list-"]) {
+  list-style-type: decimal;
+}

@@ -1,0 +1,63 @@
+.ui-quote,
+blockquote {
+  --quote-py: 0.5em;
+  --quote-px: 1.5em;
+  --quote-font-family: var(--font-sans);
+  --quote-text-color: var(--color-default);
+  --quote-font-size: 1.15rem;
+  --quote-text-align: left;
+  --quote-font-style: normal;
+  --quote-font-weight: 400;
+  --quote-bg-color: var(--color-primary);
+  --quote-bg-opacity: 0;
+  --quote-border-width: 4px;
+  --quote-border-radius: 0;
+  --quote-border-color: var(--color-primary);
+
+  --sign-mt: 2.5rem;
+  --sign-pl: 0;
+  --sign-font-family: var(--font-sans);
+  --sign-color: var(--color-default);
+  --sign-text-align: var(--quote-text-align);
+  --sign-opacity: 0.7;
+  --sign-font-size: 1rem;
+
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  font-family: var(--quote-font-family);
+  color: hsl(var(--quote-text-color));
+  font-size: var(--quote-font-size);
+  text-align: var(--quote-text-align);
+  font-style: var(--quote-font-style);
+  font-weight: var(--quote-font-weight);
+  padding: var(--quote-py) var(--quote-px);
+  border-left: var(--quote-border-width) solid hsl(var(--quote-border-color));
+  border-radius: var(--quote-border-radius);
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--quote-bg-color));
+    transition: var(--transition-background);
+    opacity: var(--quote-bg-opacity);
+  }
+
+  & .ui-quote-sign {
+    display: block;
+    width: 100%;
+    text-align: var(--sign-text-align);
+    font-family: var(--sign-font-family);
+    font-size: var(--sign-font-size);
+    color: hsla(var(--color-default), var(--sign-opacity));
+    margin-top: var(--sign-mt);
+    padding-left: var(--sign-pl);
+  }
+}

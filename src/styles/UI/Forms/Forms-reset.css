@@ -1,0 +1,133 @@
+/* Reset všech výchozích stylů u vstupů formulářů a zlepšení konzistence mezi prohlížeči
+ * -> takhle detailní reset není součástí žádného ze základních resetů (normalize ani tailwind) */
+
+/* Form inputs reset */
+input[type="text"],
+input[type="mail"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="week"],
+input[type="text"],
+input[type="text"],
+[multiple],
+select,
+textarea {
+  all: unset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  box-sizing: border-box;
+  display: block;
+  vertical-align: middle;
+  white-space: normal;
+
+  background-color: #fff;
+  border: 1px solid #718096; /* Gray 500 */
+  border-radius: 0;
+
+  padding: 0.5rem 0.75rem;
+
+  font-family: var(--font-sans);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-weight: var(--base-font-weight);
+
+  box-shadow: none;
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: 0;
+    outline-width: 0;
+    outline: none;
+
+    box-shadow: none;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #718096;
+  opacity: 1;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+::-webkit-date-and-time-value {
+  min-height: 1.5em;
+}
+
+select {
+  padding-right: 2.5rem;
+  color-adjust: exact;
+}
+
+[multiple] {
+  background-image: initial;
+  background-position: initial;
+  background-repeat: unset;
+  background-size: initial;
+  padding-right: 0.75rem;
+  color-adjust: unset;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  user-select: none;
+  color-adjust: exact;
+
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  flex-shrink: 0;
+
+  background-color: #fff;
+  border: 1px solid #718096; /* Gray 500 */
+
+  box-shadow: none;
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: 0;
+    outline-width: 0;
+    outline: none;
+
+    box-shadow: none;
+  }
+}
+
+input[type="checkbox"] {
+  border-radius: 0;
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+/* File type input */
+input[type="file"] {
+  background: unset;
+  border-color: inherit;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: unset;
+  line-height: inherit;
+}
+
+input[type="file"]:focus {
+  outline: 1px solid #718096; /* Gray 500 */
+  outline: 1px auto -webkit-focus-ring-color;
+}

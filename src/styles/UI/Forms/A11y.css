@@ -1,0 +1,35 @@
+body {
+  --form-a11y-ring-color: var(--form-accent-color);
+  --form-a11y-ring-opacity: 0.6;
+  --form-a11y-ring-width: 1.5px;
+  --form-a11y-ring-transition-duration: var(--duration);
+}
+
+.ui-input input,
+.ui-input textarea {
+  &:focus {
+    outline: none;
+    background-color: hsl(var(--form-input-focus-bg));
+    border-color: hsla(
+      var(--form-a11y-ring-color),
+      var(--form-a11y-ring-opacity)
+    );
+    box-shadow: 0 0 0 var(--form-a11y-ring-width)
+      hsla(var(--form-a11y-ring-color), var(--form-a11y-ring-opacity));
+  }
+}
+
+.ui-checkbox input,
+.ui-radio input,
+.ui-switch input {
+  &:focus-visible {
+    outline-width: 0;
+    outline: none;
+    border-color: hsla(
+      var(--form-a11y-ring-color),
+      var(--form-a11y-ring-opacity)
+    );
+    box-shadow: 0 0 0 var(--form-a11y-ring-width)
+      hsla(var(--form-a11y-ring-color), var(--form-a11y-ring-opacity));
+  }
+}

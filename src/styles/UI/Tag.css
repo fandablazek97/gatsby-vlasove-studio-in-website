@@ -1,0 +1,24 @@
+.ui-tag {
+  --tag-px: 0.5em;
+  --tag-color: var(--color-primary);
+  --tag-font-family: var(--font-mono);
+  --tag-font-size: 0.875em;
+  --tag-font-weight: 300;
+  --tag-before-after-char: "`";
+
+  display: inline;
+  padding-left: var(--tag-px);
+  padding-right: var(--tag-px);
+
+  font-family: var(--tag-font-family);
+  font-size: var(--tag-font-size);
+  font-weight: var(--tag-font-weight);
+  font-style: normal;
+  color: hsl(var(--tag-color));
+
+  &::before,
+  &::after {
+    content: var(--tag-before-after-char);
+    color: currentColor;
+  }
+}

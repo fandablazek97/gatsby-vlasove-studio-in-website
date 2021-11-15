@@ -1,0 +1,133 @@
+.ui-text {
+  --text-color: var(--color-default);
+  --text-font-family: var(--font-sans);
+  --text-font-size: var(--base-font-size);
+  --text-font-weight: var(--base-font-weight);
+  --text-line-height: var(--base-line-height);
+  --text-items-mb: 1em;
+
+  --text-heading-font-family: var(--font-sans);
+  --text-heading-color: var(--color-default-strong);
+  --text-heading-weight: 700;
+  --text-heading-text-transform: none;
+  --text-heading-mt: 2.25em;
+  --text-heading-mb: 0.67em;
+
+  --text-list-marker-color: var(--color-primary);
+  --text-list-ml: 1.15rem;
+
+  --text-link-color: var(--color-primary);
+  --text-link-decoration: none;
+
+  & * {
+    box-sizing: border-box;
+    color: hsl(var(--text-color));
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-weight: var(--text-font-weight);
+    line-height: var(--text-line-height);
+  }
+
+  & p,
+  & ul,
+  & ol {
+    margin-bottom: var(--text-items-mb);
+  }
+
+  & a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: hsl(var(--text-link-color));
+    text-decoration: var(--text-link-decoration);
+    transition: var(--transition-opacity);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  & b,
+  & strong {
+    font-weight: 600;
+  }
+
+  & i,
+  & em {
+    display: inline;
+    font-style: italic;
+  }
+
+  & :is(h1, h2, h3, h4, h5, h6) {
+    color: hsl(var(--text-heading-color));
+    font-family: var(--text-font-family);
+    font-weight: var(--text-heading-weight);
+    font-style: normal;
+    line-height: 1.15;
+    text-transform: var(--text-heading-text-transform);
+    margin-top: var(--text-heading-mt);
+    margin-bottom: var(--text-heading-mb);
+  }
+
+  & h1 {
+    font-size: var(--font-size-h1);
+    margin-top: 0;
+  }
+
+  & h2 {
+    font-size: var(--font-size-h2);
+  }
+
+  & h3 {
+    font-size: var(--font-size-h3);
+  }
+
+  & h4 {
+    font-size: var(--font-size-h4);
+  }
+
+  & h5 {
+    font-size: var(--font-size-h5);
+  }
+
+  & h6 {
+    font-size: var(--font-size-h6);
+  }
+
+  & ul,
+  & ol {
+    margin-left: var(--text-list-ml);
+  }
+
+  & ul > li,
+  & ol > li {
+    &::marker {
+      color: hsl(var(--text-list-marker-color));
+      font-size: 1.1em;
+    }
+  }
+
+  & ul {
+    list-style-type: disc;
+  }
+
+  & ol {
+    list-style-type: decimal;
+  }
+
+  & img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+    float: none !important;
+    margin: 2rem 0 2rem 0;
+  }
+
+  & iframe {
+    display: block;
+    max-width: 100%;
+  }
+
+  & hr {
+    margin: 1.125rem 0;
+  }
+}

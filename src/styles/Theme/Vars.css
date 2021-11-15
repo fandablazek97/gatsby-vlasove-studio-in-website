@@ -1,0 +1,54 @@
+:root {
+  /* Globální nastavení */
+  --base-scroll-behavior: auto; /* auto / smooth */
+  --base-font-size: 1rem; /* 1rem - 16px -> nemá efekt na velikost jednotky rem */
+  --base-font-weight: 400;
+  --base-line-height: 1.8;
+
+  /* Písmo */
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  /* Nadpisy pro mobil * -> Ověřené hodnoty, není třeba upravovat */
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h4: 1.125rem;
+  --font-size-h5: 1rem;
+  --font-size-h6: 0.875rem;
+
+  /* Nadpisy pro větší zařízení než mobil -> Upravit hodnoty zde */
+  @media (--media-sm) {
+    --font-size-h1: 3rem; /* 5xl - 48px */
+    --font-size-h2: 2.25rem; /* 4xl - 36px */
+    --font-size-h3: 1.5rem; /* 2xl - 24px */
+    --font-size-h4: 1.25rem; /* xl - 20px */
+    --font-size-h5: 1rem; /* base - 16px */
+    --font-size-h6: 0.875rem; /* sm - 14px */
+  }
+
+  /* Wrapper -> od šířky wrapperů je nutné odečíst padding -> výsledkem je skutečná šířka obsahu */
+  --wrapper: 85rem; /* 85rem = 1360px -> 1210px bez paddingu */
+  --wrapper-sm: 60rem; /* 60rem = 960px -> 810px bez paddingu */
+  --wrapper-lg: 100%;
+  --wrapper-padding: calc(1rem + 3vw);
+
+  /* Effects and transitions */
+  --radius: 0.1875rem; /* Globální zaoblení prvků webu */
+  --duration: 280ms; /* Globální čas přechodu */
+  --transition-color: color var(--duration) ease 0ms;
+  --transition-background: background-color var(--duration) ease 0ms;
+  --transition-transform: transform var(--duration) ease 0ms;
+  --transition-opacity: opacity var(--duration) ease 0ms;
+  --transition-border: border-color var(--duration) ease 0ms;
+  --transition-outline: outline var(--duration) ease 0ms;
+  --transition-shadow: box-shadow var(--duration) ease 0ms;
+  --transition-fill: fill var(--duration) ease 0ms;
+}

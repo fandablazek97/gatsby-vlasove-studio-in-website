@@ -1,0 +1,35 @@
+/* Accessibility 
+ * Zde se nastavuje výchozí outline pro všechny :focus elementy
+ * Celý web kvůli přístupnosti musí jít ovládat pouze pomocí klávesnice
+ * a :focus (:focus-visible) state musí být viditelný  
+ * -> proč používáme hlavně :focus-visible - `https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible` */
+
+body {
+  --a11y-outline-color: var(--color-info);
+  --a11y-outline-opacity: 0.6;
+  --a11y-outline-style: solid;
+  --a11y-outline-width: 3.5px;
+  --a11y-outline-offset: 3px;
+}
+
+.a11y-focus,
+a:not([class*="ui-btn"]) {
+  &:focus-visible {
+    outline: none;
+    outline-color: hsla(var(--a11y-outline-color), var(--a11y-outline-opacity));
+    outline-style: var(--a11y-outline-style);
+    outline-width: var(--a11y-outline-width);
+    outline-offset: var(--a11y-outline-offset);
+  }
+}
+
+.ui-button,
+button {
+  &:focus-visible,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 var(--a11y-outline-width)
+      hsla(var(--a11y-outline-color), var(--a11y-outline-opacity));
+    transition: var(--transition-shadow);
+  }
+}

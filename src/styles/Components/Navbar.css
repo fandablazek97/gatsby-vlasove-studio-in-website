@@ -1,0 +1,131 @@
+/* NATIVE NAVBAR */
+
+/* Stylování navigace je více méně celé v tailwindu, 
+ * některé věci jsou ale jednodušší a přesnejší udělat externě tady 
+ * Jedná se hlavně o přechody a animace */
+
+.navbar {
+  background-color: transparent;
+  will-change: transform, height;
+  transition: background 500ms ease, transform 420ms ease, height 500ms ease,
+    box-shadow 500ms ease;
+}
+
+/* Toggle třída při scrollu */
+.navbar--is-scrolled {
+  height: 5rem !important;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Skrýt / Ukázat navbar během scrollování */
+.navbar--hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+.navbar--visible {
+  transform: translateY(0);
+}
+
+/* Otevírací menu - pozadí musí být průhledné, aby se správně animovalo */
+.navbar__menu {
+  background-color: rgba(0, 0, 0, 0);
+  visibility: hidden;
+  transition: background-color 280ms ease, visibility 0ms linear 500ms;
+}
+
+/* Třída se aktivuje při kliknutí na hamburger menu */
+.navbar__menu--active {
+  background-color: hsl(var(--color-background));
+  visibility: visible;
+  transition: background 280ms ease;
+
+  & .navbar__menu__list {
+    animation: MenuItemsFadeDown 600ms ease 150ms forwards;
+  }
+  & .social-icons {
+    animation: MenuItemsFadeDown 600ms ease 300ms forwards;
+  }
+}
+
+@keyframes MenuItemsFadeDown {
+  from {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Opacity je animovaná, a je nutné ji nastavit u animovaných elementů na 0,
+ * jinak animace neproběhne správně */
+.navbar {
+  & .navbar__menu__list,
+  & .social-icons {
+    opacity: 0;
+  }
+}
+
+/* Hamburger ikona - otevírá hlavní menu */
+.navbar__opener {
+  & > div {
+    width: 28px;
+    height: 2px;
+    margin: 5px 0;
+
+    opacity: 1;
+    transform: rotate(0) translateX(0);
+
+    transition: transform 320ms ease, opacity 320ms ease, background 320ms ease;
+  }
+}
+
+/* Hamburger třída pro aktivaci animace po kliknutí */
+.navbar__opener--active {
+  & #opener-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  & #opener-2 {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  & #opener-3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* --- Konec hlavního stylu navigace --- */
+
+/*
+ * -- Bílá navigace ve výchozí pozici (bez scrollu nahoře) --
+ * -> Pokud má mít navigace ve světlém režimu bílé prvky (např při fotce v pozadí cover fotky webu)
+ * -> Stačí přidat třídu `navbar--not-scrolled` do podmínečné třídy tagu nav (třída `navbar`)
+ */
+
+/* Logo */
+.navbar--not-scrolled a img {
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+/* položky navigace */
+.navbar--not-scrolled ul li a:not(.navbar__menu li a) {
+  color: white !important;
+}
+
+/* Přepínač tmavého režimu */
+.navbar--not-scrolled .theme-toggler {
+  color: hsl(223, 16%, 83%) !important;
+  background-color: hsla(223, 16%, 83%, var(--tw-bg-opacity)) !important;
+}
+
+/* Burger menu */
+.navbar--not-scrolled .navbar__opener {
+  mix-blend-mode: difference;
+
+  & > div {
+    background-color: #fff;
+  }
+}

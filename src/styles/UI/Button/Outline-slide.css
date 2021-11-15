@@ -1,0 +1,62 @@
+.ui-button[variant="outline-slide"] {
+  background-color: transparent;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: var(--button-border-width);
+  padding: calc(var(--button-py) - var(--button-border-width))
+    calc(var(--button-px) - var(--button-border-width));
+
+  /* Text */
+  & span {
+    color: currentColor;
+  }
+
+  /* Icon */
+  & svg,
+  & i,
+  & [class^="icon-"] {
+    color: currentColor;
+  }
+
+  /* Animated bg */
+  &::before {
+    will-change: transform, opacity;
+
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: -5% -5% -5% 0;
+    width: 120%;
+    height: 110%;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translateX(-100%) skew(15deg);
+    transition: opacity calc(var(--duration) / 2) ease,
+      transform calc(var(--duration) * 2) ease;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+
+  &:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &:hover span {
+    color: hsl(var(--button-text-color));
+  }
+
+  &:hover svg,
+  &:hover i,
+  &:hover [class^="icon-"] {
+    color: hsl(var(--button-text-color));
+  }
+
+  /* If loading state -> spinner color fix */
+  &::after {
+    border-color: currentColor;
+  }
+}

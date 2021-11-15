@@ -1,0 +1,20 @@
+.ui-wrapper,
+.ui-wrapper-sm,
+.ui-wrapper-lg {
+  padding-left: var(--wrapper-padding);
+  padding-right: var(--wrapper-padding);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui-wrapper {
+  max-width: var(--wrapper);
+}
+
+.ui-wrapper-sm {
+  max-width: var(--wrapper-sm);
+}
+
+.ui-wrapper-lg {
+  width: 100%;
+}

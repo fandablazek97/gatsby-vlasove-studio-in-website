@@ -1,0 +1,220 @@
+.scroll-reveal {
+  --sr-duration: 900ms;
+  --sr-easing: ease;
+  --sr-translate-distance: 4rem;
+  --sr-delay: 0ms;
+
+  will-change: transform, opacity;
+  transform-origin: 50% 50%;
+  transition: opacity var(--sr-duration) var(--sr-easing) var(--sr-delay),
+    transform var(--sr-duration) var(--sr-easing) var(--sr-delay);
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Delay */
+    .sr-delay-100 {
+      --sr-delay: 100ms;
+    }
+
+    .sr-delay-200 {
+      --sr-delay: 200ms;
+    }
+
+    .sr-delay-300 {
+      --sr-delay: 300ms;
+    }
+
+    .sr-delay-400 {
+      --sr-delay: 400ms;
+    }
+
+    .sr-delay-500 {
+      --sr-delay: 500ms;
+    }
+
+    .sr-delay-600 {
+      --sr-delay: 600ms;
+    }
+
+    .sr-delay-700 {
+      --sr-delay: 700ms;
+    }
+
+    .sr-delay-800 {
+      --sr-delay: 800ms;
+    }
+
+    .sr-delay-900 {
+      --sr-delay: 900ms;
+    }
+
+    .sr-delay-1000 {
+      --sr-delay: 1000ms;
+    }
+
+    .sr-delay-1100 {
+      --sr-delay: 1100ms;
+    }
+
+    .sr-delay-1200 {
+      --sr-delay: 1200ms;
+    }
+
+    .sr-delay-1300 {
+      --sr-delay: 1300ms;
+    }
+
+    .sr-delay-1500 {
+      --sr-delay: 1500ms;
+    }
+
+    .sr-delay-1500 {
+      --sr-delay: 1500ms;
+    }
+
+    /* Duration */
+    .sr-duration-100 {
+      --sr-duration: 300ms;
+    }
+
+    .sr-duration-200 {
+      --sr-duration: 300ms;
+    }
+
+    .sr-duration-300 {
+      --sr-duration: 300ms;
+    }
+
+    .sr-duration-400 {
+      --sr-duration: 400ms;
+    }
+
+    .sr-duration-500 {
+      --sr-duration: 500ms;
+    }
+
+    .sr-duration-600 {
+      --sr-duration: 600ms;
+    }
+
+    .sr-duration-700 {
+      --sr-duration: 700ms;
+    }
+
+    .sr-duration-800 {
+      --sr-duration: 800ms;
+    }
+
+    .sr-duration-900 {
+      --sr-duration: 900ms;
+    }
+
+    .sr-duration-1000 {
+      --sr-duration: 1000ms;
+    }
+
+    .sr-duration-1100 {
+      --sr-duration: 1100ms;
+    }
+
+    .sr-duration-1200 {
+      --sr-duration: 1200ms;
+    }
+
+    .sr-duration-1300 {
+      --sr-duration: 1300ms;
+    }
+
+    .sr-duration-1400 {
+      --sr-duration: 1400ms;
+    }
+
+    .sr-duration-1500 {
+      --sr-duration: 1500ms;
+    }
+
+    .sr-duration-2000 {
+      --sr-duration: 2000ms;
+    }
+
+    .sr-duration-2500 {
+      --sr-duration: 2500ms;
+    }
+
+    .sr-duration-3000 {
+      --sr-duration: 3000ms;
+    }
+  }
+}
+
+/**** Animations ****/
+
+/* Fade */
+.sr-fade-hidden {
+  opacity: 0;
+}
+.sr-fade-visible {
+  opacity: 1;
+}
+
+/* Fade Up */
+.sr-fade-up-hidden {
+  opacity: 0;
+  transform: translateY(var(--sr-translate-distance));
+}
+.sr-fade-up-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Down */
+.sr-fade-down-hidden {
+  opacity: 0;
+  transform: translateY(calc(var(--sr-translate-distance) * -1));
+}
+.sr-fade-down-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade Left */
+.sr-fade-left-hidden {
+  opacity: 0;
+  transform: translateX(var(--sr-translate-distance));
+}
+
+.sr-fade-left-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade Right */
+.sr-fade-right-hidden {
+  opacity: 0;
+  transform: translateX(calc(var(--sr-translate-distance) * -1));
+}
+.sr-fade-right-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom in */
+.sr-zoom-in-hidden {
+  opacity: 0;
+  transform: scale(0.2);
+}
+.sr-zoom-in-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom out */
+.sr-zoom-out-hidden {
+  opacity: 0;
+  transform: scale(1.5);
+}
+.sr-zoom-out-visible {
+  opacity: 1;
+  transform: scale(1);
+}

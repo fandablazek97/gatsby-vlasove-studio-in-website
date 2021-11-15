@@ -1,0 +1,34 @@
+@custom-media --media-xs (min-width: 360px);
+@custom-media --media-sm (min-width: 576px);
+@custom-media --media-md (min-width: 768px);
+@custom-media --media-lg (min-width: 1021px);
+@custom-media --media-xl (min-width: 1280px);
+@custom-media --media-2xl (min-width: 1536px);
+
+/* Syntaxe použití breakpointů přímo z tailwindu ->
+
+@screen xs {
+    ...
+}
+
+@screen sm {
+    ...
+}
+
+@screen md {
+    ...
+}
+
+@screen lg {
+    ...
+}
+
+@screen xl {
+    ...
+}
+
+@screen 2xl {
+    ...
+}
+
+*/

@@ -1,0 +1,16 @@
+@charset "UTF-8"; /* -> ! Must be set here */
+
+/* Base */
+@import "tailwindcss/base";
+@import "Base/+Base.css";
+@import "Theme/+Theme.css";
+
+/* Framework parts */
+@import "Libraries/+Libraries.css";
+@import "Tools/+Tools.css";
+@import "UI/+Ui.css";
+@import "Components/+Components.css";
+
+/* Tailwind */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

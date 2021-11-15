@@ -1,0 +1,67 @@
+/* Postupný přechod při přepnutí režimu */
+:root {
+  --dark-mode-transition-time: 300ms;
+  --dark-mode-transition-easing: ease;
+}
+
+/* Base elements */
+body {
+  transition: color var(--dark-mode-transition-time)
+      var(--dark-mode-transition-easing),
+    background var(--dark-mode-transition-time)
+      var(--dark-mode-transition-easing);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  transition: color calc(var(--dark-mode-transition-time) / 2)
+    var(--dark-mode-transition-easing);
+}
+
+section,
+header,
+nav,
+footer,
+div,
+span {
+  transition: background var(--dark-mode-transition-time)
+    var(--dark-mode-transition-easing);
+}
+
+/* UI components */
+.ui-link,
+.ui-link-2,
+.ui-link-3,
+.ui-link-4 {
+  transition: color var(--dark-mode-transition-time)
+    var(--dark-mode-transition-easing);
+}
+
+.separator::after {
+  transition: background var(--dark-mode-transition-time)
+    var(--dark-mode-transition-easing);
+}
+
+.ui-progress {
+  transition: background var(--dark-mode-transition-time)
+    var(--dark-mode-transition-easing);
+}
+
+kbd,
+.ui-kbd {
+  transition: color var(--dark-mode-transition-time)
+    var(--dark-mode-transition-easing);
+
+  &::before {
+    transition: background var(--dark-mode-transition-time)
+        var(--dark-mode-transition-easing),
+      border var(--dark-mode-transition-time) var(--dark-mode-transition-easing);
+  }
+}

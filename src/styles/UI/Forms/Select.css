@@ -1,0 +1,77 @@
+.ui-select {
+  --select-icon-size: 0.875em;
+
+  position: relative;
+  z-index: 0;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+
+  select {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    padding: var(--form-input-py) var(--form-input-px);
+    font-size: var(--form-font-size);
+    color: hsl(var(--form-text-color));
+    font-weight: var(--form-font-weight);
+    text-transform: var(--form-text-transform);
+    background-color: hsl(var(--form-input-bg));
+    border: var(--form-border-width) solid hsl(var(--form-border-color));
+    border-bottom: var(--form-border-bottom-width) solid
+      hsl(var(--form-border-color)); /* only for flushed style */
+    border-radius: var(--form-border-radius);
+    transition: var(--transition-color), var(--transition-background),
+      var(--transition-border);
+
+    /* Disable default styling for all devices */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+  }
+
+  /* Ikona dropdownu */
+  &:after {
+    position: absolute;
+    z-index: 2;
+    right: var(--form-input-px);
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-family: "iconfont" !important;
+    content: var(--icon-chevron-down);
+    font-size: var(--select-icon-size);
+    color: hsl(var(--form-text-color));
+    pointer-events: none;
+
+    /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* States */
+  &:focus {
+    outline: none;
+    background-color: hsl(var(--form-input-focus-bg));
+    border-color: hsl(var(--form-accent-color));
+  }
+
+  &[disabled] {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  /* Sizes */
+  &[data-size="sm"] {
+    --input-font-size: 0.85rem;
+  }
+
+  &[data-size="lg"] {
+    --input-font-size: 1.15rem;
+  }
+}

@@ -1,0 +1,198 @@
+@import "Flat.css";
+@import "Flat-slide.css";
+@import "Flat-expand.css";
+@import "Outline.css";
+@import "Outline-slide.css";
+@import "Outline-expand.css";
+@import "Outline-invert.css";
+@import "Text.css";
+@import "Text-invert.css";
+@import "Text-outline.css";
+
+@import "Button-group.css";
+
+.ui-button {
+  --button-default-color: var(--color-primary);
+  --button-text-color: var(--color-light);
+  --button-py: 0.8em;
+  --button-px: 1.8em;
+  --button-font-size: 0.9375rem;
+  --button-text-transform: none;
+  --button-letter-spacing: 0.05em;
+  --button-font-weight: 600;
+  --button-border-width: 2px;
+  --button-border-radius: var(--radius);
+  --button-icon-size: 1.2em;
+  --button-icon-offset: 0.6em;
+  --button-hover-overlay-color: black; /* black or white */
+  --button-hover-overlay-opacity: 0.275;
+
+  /* Button styling */
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  text-decoration: none !important;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  width: max-content;
+  height: auto;
+  padding: var(--button-py) var(--button-px);
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  color: hsl(var(--button-default-color));
+  font-size: var(--button-font-size);
+  background-color: hsl(var(--button-default-color));
+  border-radius: var(--button-border-radius);
+  box-shadow: none;
+
+  transition: var(--transition-color), var(--transition-background),
+    var(--transition-border), var(--transition-shadow),
+    var(--transition-outline);
+
+  /* Inner text styling */
+  & span {
+    font-family: var(--font-family-primary);
+    font-size: 1em;
+    color: hsl(var(--button-text-color));
+    font-weight: var(--button-font-weight);
+    text-transform: var(--button-text-transform);
+    letter-spacing: var(--button-letter-spacing);
+
+    transition: var(--transition-color);
+  }
+
+  /* Icon styling */
+  & svg,
+  & i,
+  & [class^="icon-"] {
+    color: hsl(var(--button-text-color));
+    font-size: var(--button-icon-size);
+
+    transition: var(--transition-color), var(--transition-fill);
+  }
+
+  /* --------------- */
+  /* Data attributes */
+
+  /* Btn size variants */
+  &[data-size="sm"] {
+    --button-font-size: 0.75rem;
+  }
+
+  &[data-size="lg"] {
+    --button-font-size: 1.125rem;
+  }
+
+  &[data-size="xl"] {
+    --button-font-size: 1.3125rem;
+  }
+
+  /* Btn shape variants */
+  &[data-shape="square"] {
+    border-radius: 0;
+  }
+
+  &[data-shape="rounded"] {
+    border-radius: 0.65rem;
+  }
+
+  &[data-shape="pill"] {
+    border-radius: 100px;
+  }
+
+  &[data-shape="circle"] {
+    border-radius: 100%;
+    padding: 0.85em;
+  }
+
+  /* Icon variants */
+  &[data-icon="left"] {
+    & svg,
+    & i,
+    & [class^="icon-"] {
+      margin-right: var(--button-icon-offset);
+    }
+  }
+
+  &[data-icon="right"] {
+    & svg,
+    & i,
+    & [class^="icon-"] {
+      margin-left: var(--button-icon-offset);
+    }
+  }
+
+  &[data-icon="single"] {
+    padding: 0.85em;
+    aspect-ratio: 1 / 1;
+
+    & svg,
+    & i,
+    & [class^="icon-"] {
+      margin: 0;
+    }
+  }
+
+  /* Loading state */
+  &[data-loading="true"],
+  &.ui-btn-loading {
+    pointer-events: none;
+
+    & span,
+    & svg,
+    & i,
+    & [class^="icon-"] {
+      opacity: 0;
+      transition: var(transition-opacity);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      margin: auto;
+      height: 1.6em;
+      width: 1.6em;
+      border-width: 4px;
+      border-style: solid;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-radius: 50%;
+      animation: load 0.5s linear 0ms infinite;
+    }
+  }
+
+  /* Disabled */
+
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.4;
+    filter: grayscale(100%);
+  }
+}
+
+/* Animace pro loading button */
+@keyframes load {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

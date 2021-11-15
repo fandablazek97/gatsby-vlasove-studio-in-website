@@ -1,0 +1,60 @@
+.ui-spinner {
+  --spinner-size: 2rem;
+  --spinner-thickness: 0.125em; /* -> Relativní k velikosti spinneru */
+  --spinner-animation-duration: 500ms;
+  --spinner-animation-easing: linear;
+  --spinner-default-color: var(--color-primary);
+
+  position: relative;
+  font-size: var(--spinner-size);
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+
+  &:not([class*="text-"]) {
+    color: hsl(var(--spinner-default-color));
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    margin: auto;
+    height: var(--spinner-size);
+    width: var(--spinner-size);
+    border: var(--spinner-thickness) solid currentColor;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation: spinner var(--spinner-animation-duration)
+      var(--spinner-animation-easing) 0ms infinite;
+  }
+
+  &[data-size="xs"] {
+    --spinner-size: 1rem;
+  }
+
+  &[data-size="sm"] {
+    --spinner-size: 1.5rem;
+  }
+
+  &[data-size="lg"] {
+    --spinner-size: 3rem;
+  }
+
+  &[data-size="xl"] {
+    --spinner-size: 5rem;
+  }
+
+  &[data-size="2xl"] {
+    --spinner-size: 8rem;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

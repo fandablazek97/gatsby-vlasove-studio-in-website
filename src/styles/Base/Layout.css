@@ -1,0 +1,76 @@
+/* Base setup for UI */
+
+/* Turn off smooth scroll behaviour 
+ * -> we have `gatsby-plugin-anchor-links` handeling it correctly */
+:root {
+  scroll-behavior: var(--base-scroll-behavior);
+}
+
+/* Adding global responsive font-sizing 
+ * -> takes effect on all elements (influence size of rem unit) */
+html {
+  font-size: 80%;
+
+  @media (--media-xs) {
+    font-size: 85%;
+  }
+
+  @media (--media-sm) {
+    font-size: 90%;
+  }
+
+  @media (--media-md) {
+    font-size: 95%;
+  }
+
+  @media (--media-lg) {
+    font-size: 100%;
+  }
+}
+
+/* 
+ * 1. Add font-display: swap for performance
+ * 2. Add base typography to all body (takes effect on all elements)
+ * -> this styling prevent higher selectors (p, h1...) for easy override elements (even on parent) with utility classes
+ * 3. Set default background-color */
+body {
+  font-display: swap;
+  font-family: var(--font-sans);
+  font-size: var(--base-font-size);
+  color: hsl(var(--color-default));
+  font-weight: var(--base-font-weight);
+  line-height: var(--base-line-height);
+  font-style: normal;
+  background-color: hsl(var(--color-background-100));
+}
+
+/* Colored selection based on primary color */
+::selection {
+  color: white;
+  background-color: hsla(var(--color-primary), 1);
+}
+
+/* make sure section tag is fullwidth & inner content not overlaping */
+section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+ * Style a bit default link */
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* 
+ * Add basic styles to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  line-height: 1.15;
+}

@@ -1,0 +1,62 @@
+@import "Forms-reset";
+@import "A11y.css";
+@import "Input.css";
+@import "Input-group.css";
+@import "Select.css";
+@import "Check-radio.css";
+@import "Switch.css";
+@import "Honeypot.css";
+
+/* Form controll variables */
+body {
+  --form-accent-color: var(--color-primary);
+  --form-input-py: 0.5em;
+  --form-input-px: 1.2em;
+  --form-font-size: 1rem;
+  --form-font-weight: 400;
+  --form-text-color: var(--color-default-strong);
+  --form-text-transform: none;
+  --form-placeholder-label-opacity: 0.55;
+  --form-border-width: 2px;
+  --form-border-color: var(--color-background-200);
+  --form-border-radius: var(--radius);
+  --form-input-bg: var(--color-background);
+  --form-input-focus-bg: var(--form-input-bg);
+
+  /* * * Form styles * * */
+  & .ui-form-outline {
+    --form-text-color: var(--color-default-strong);
+    --form-placeholder-label-opacity: 0.55;
+    --form-border-width: 1.5px;
+    --form-border-color: var(--color-background-200);
+    --form-border-radius: var(--radius);
+    --form-input-bg: var(--color-background);
+    --form-input-focus-bg: var(--form-input-bg);
+  }
+
+  & .ui-form-filled {
+    --form-text-color: var(--color-default-strong);
+    --form-placeholder-label-opacity: 0.4;
+    --form-border-width: 1px;
+    --form-border-color: var(--color-background-200);
+    --form-border-radius: var(--radius);
+    --form-input-bg: var(--color-background-200);
+    --form-input-focus-bg: transparent;
+  }
+
+  --form-border-bottom-width: var(
+    --form-border-width
+  ); /* relevant only for flushed style, but it have to be set like this */
+  & .ui-form-flushed {
+    --form-input-py: 0.5em;
+    --form-input-px: 0;
+    --form-text-color: var(--color-default-strong);
+    --form-placeholder-label-opacity: 0.45;
+    --form-border-width: 0;
+    --form-border-bottom-width: 3px;
+    --form-border-color: var(--color-background-200);
+    --form-border-radius: 0;
+    --form-input-bg: transparent;
+    --form-input-focus-bg: transparent;
+  }
+}

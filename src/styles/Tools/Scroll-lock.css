@@ -1,0 +1,10 @@
+/* Některá mobilní zařízení (iOS) ignorují overrflow hidden
+ * a lze stále scrollovat (např otevřené fullscreen menu)
+ * -> tohle je třída, která problém řeší*/
+.scroll-lock {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  touch-action: none;
+  -ms-touch-action: none;
+}

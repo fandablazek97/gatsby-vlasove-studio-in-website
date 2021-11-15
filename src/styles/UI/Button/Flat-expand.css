@@ -1,0 +1,33 @@
+.ui-button[variant="flat-expand"] {
+  background-color: currentColor;
+
+  &::before {
+    will-change: transform, opacity;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: -5%;
+    width: 110%;
+    height: 110%;
+    background-color: var(--button-hover-overlay-color);
+    opacity: 0;
+    transform: scaleX(0) skew(-20deg);
+    transition: opacity var(--duration) ease,
+      transform calc(var(--duration) * 1.8) ease;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+
+  &:hover::before {
+    transform: scaleX(1.25) skew(-20deg);
+    opacity: var(--button-hover-overlay-opacity);
+  }
+
+  /* If loading state -> spinner color fix */
+  &::after {
+    border-color: hsl(var(--button-text-color));
+  }
+}

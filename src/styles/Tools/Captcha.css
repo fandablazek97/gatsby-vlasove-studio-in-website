@@ -1,0 +1,4 @@
+/* indikátor recaptchy na webu - skrytí */
+.grecaptcha-badge {
+  display: none;
+}

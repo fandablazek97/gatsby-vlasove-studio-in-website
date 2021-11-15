@@ -1,0 +1,48 @@
+.ui-input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: stretch;
+
+  & .ui-input-addon {
+    padding: var(--form-input-py) calc(var(--form-input-py) * 2);
+    color: hsl(var(--form-text-color));
+    border: var(--form-border-width) solid hsl(var(--form-border-color));
+    border-radius: var(--form-border-radius);
+    background-color: hsl(var(--form-border-color));
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    transition: var(--transition-background), var(--transition-color),
+      var(--transition-border);
+
+    /* Icon size */
+    & svg,
+    & i,
+    & span {
+      font-size: 1.35em;
+    }
+  }
+
+  & .ui-input {
+    flex: 1 1 auto;
+  }
+
+  & > *:not(:first-child),
+  & .ui-input:not(:first-child) > input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & > *:not(:last-child),
+  & .ui-input:not(:last-child) > input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

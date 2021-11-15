@@ -1,0 +1,19 @@
+.ui-heading {
+  --heading-font-family: var(--font-sans);
+  --heading-color: var(--color-default-strong);
+  --heading-font-weight: 700;
+  --heading-text-transform: none;
+  --heading-margin-bottom: 0.67em;
+
+  display: block;
+  color: hsl(var(--heading-color));
+  font-family: var(--heading-font-family);
+  font-weight: var(--heading-font-weight);
+  line-height: 1.15;
+  text-transform: var(--heading-text-transform);
+  font-style: normal;
+
+  &:not([class*="mb-"]) {
+    margin-bottom: var(--heading-margin-bottom);
+  }
+}

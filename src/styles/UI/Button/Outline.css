@@ -1,0 +1,40 @@
+.ui-button[variant="outline"] {
+  background-color: transparent;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: var(--button-border-width);
+  padding: calc(var(--button-py) - var(--button-border-width))
+    calc(var(--button-px) - var(--button-border-width));
+
+  /* Text */
+  & span {
+    color: currentColor;
+  }
+
+  /* Icon */
+  & svg,
+  & i,
+  & [class^="icon-"] {
+    color: currentColor;
+  }
+
+  /* Hover state */
+  &:hover {
+    background-color: currentColor;
+
+    & span {
+      color: hsl(var(--button-text-color));
+    }
+
+    & svg,
+    & i,
+    & [class^="icon-"] {
+      color: hsl(var(--button-text-color));
+    }
+  }
+
+  /* If loading state -> spinner color fix */
+  &::after {
+    border-color: currentColor;
+  }
+}

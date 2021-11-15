@@ -1,0 +1,88 @@
+.ui-badge {
+  --bage-main-color: var(--color-primary);
+  --bage-py: 0;
+  --bage-px: 0.3em;
+  --bage-font-size: 0.75em;
+  --bage-text-transform: uppercase;
+  --bage-letter-spacing: normal;
+  --bage-font-weight: 500;
+  --bage-icon-size: 1em;
+  --bage-icon-offset: 0.6em;
+  --bage-border-radius: var(--radius);
+  --bage-bg-opacity: 0.15;
+  /* Bage group */
+  --bage-group-spacing: 0.5em;
+
+  /* Bage setup */
+  cursor: default;
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  padding: var(--bage-py) var(--bage-px);
+  margin: 0;
+
+  position: relative;
+  z-index: 1;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--bage-font-size);
+  color: hsl(var(--bage-main-color));
+  font-weight: var(--bage-font-weight);
+  text-transform: var(--bage-text-transform);
+  letter-spacing: var(--bage-letter-spacing);
+
+  background: transparent;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: 10% 0;
+    width: 100%;
+    height: 80%;
+    border-color: transparent;
+    border-radius: var(--bage-border-radius);
+    background-color: currentColor;
+    opacity: var(--bage-bg-opacity);
+  }
+
+  /* Bage size variants */
+  &[data-size="sm"] {
+    --bage-font-size: 0.625em;
+  }
+
+  &[data-size="lg"] {
+    --bage-font-size: 0.875em;
+  }
+
+  &[data-size="xl"] {
+    --bage-font-size: 1em;
+  }
+
+  /* Bage shape variants */
+  &[data-shape="square"] {
+    border-radius: 0;
+  }
+
+  &[data-shape="rounded"] {
+    border-radius: 0.4rem;
+  }
+
+  &[data-shape="pill"] {
+    border-radius: 100px;
+  }
+}
+
+.ui-badge-group {
+  display: flex;
+
+  & > .ui-badge:not(:last-child) {
+    margin-right: var(--bage-group-spacing);
+  }
+}
