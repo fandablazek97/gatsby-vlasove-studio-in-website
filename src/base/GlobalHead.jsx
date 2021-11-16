@@ -1,6 +1,3 @@
-// Je nutné všechny ikony vygenerovat a nahradit soubory ve složce `public/favicon`
-// Odkaz na geneátor favikon: https://realfavicongenerator.net
-
 import React from "react";
 import { Helmet } from "react-helmet";
 

@@ -16,7 +16,6 @@ module.exports = {
         name: `gatsby-reveal-ui`,
         short_name: `reveal`,
         start_url: `/`,
-        // theme_color: `#F5143A`,
         icon: "src/static/images/favicon.png",
       },
     },

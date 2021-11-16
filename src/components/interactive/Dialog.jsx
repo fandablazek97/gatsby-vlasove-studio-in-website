@@ -6,7 +6,12 @@ import React, { useState, Fragment } from "react";
 import { Dialog as HeadlessDialog, Transition } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-export default function Modal({ openButton, children, closeButton }) {
+export default function Dialog({
+  openButton,
+  title,
+  description,
+  closeButton,
+}) {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeDialog() {
@@ -31,18 +36,8 @@ export default function Modal({ openButton, children, closeButton }) {
           onClose={() => setIsOpen(false)}
           className="fixed inset-0 z-200 overflow-y-auto"
         >
-          <Transition.Child
-            as={Fragment}
-            enter="transition-opacity ease duration-default"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition ease duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            {/* Overlay wrapnutý animací */}
-            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-black bg-opacity-50 z-200" />
-          </Transition.Child>
+          {/* Overlay */}
+          <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen" />
 
           <Transition.Child
             as={Fragment}
@@ -55,7 +50,15 @@ export default function Modal({ openButton, children, closeButton }) {
           >
             {/* Obsah modalu - container */}
             <div className="fixed z-250 top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-md p-8 overflow-hidden bg-background dark:bg-background-200 shadow-lg rounded-xl">
-              {children}
+              {/* Nadpis */}
+              <HeadlessDialog.Title as="h3" className="ui-heading text-h3">
+                {title}
+              </HeadlessDialog.Title>
+
+              {/* Text */}
+              <HeadlessDialog.Description>
+                {description}
+              </HeadlessDialog.Description>
 
               {/* Tlačítko pro zavření modalu */}
               <button
@@ -73,8 +76,9 @@ export default function Modal({ openButton, children, closeButton }) {
   );
 }
 
-Modal.propTypes = {
+Dialog.propTypes = {
   openButton: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   closeButton: PropTypes.node.isRequired,
 };

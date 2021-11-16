@@ -17,7 +17,7 @@ body {
   --form-text-color: var(--color-default-strong);
   --form-text-transform: none;
   --form-placeholder-label-opacity: 0.55;
-  --form-border-width: 2px;
+  --form-border-width: 1px;
   --form-border-color: var(--color-background-200);
   --form-border-radius: var(--radius);
   --form-input-bg: var(--color-background);

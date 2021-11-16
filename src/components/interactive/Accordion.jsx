@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 // Icons
-// import { MdExpandMore } from "react-icons/md";
 import { HiOutlineChevronDown } from "react-icons/hi";
 
 export default function Accordion({

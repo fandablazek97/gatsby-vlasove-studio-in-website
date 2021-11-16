@@ -1,7 +1,7 @@
 import React from "react";
 
 // Logo
-import RevealLogo from "../../static/images/reveal-white-logo.svg";
+import RevealLogo from "../../static/images/reveal-badge-logo.svg";
 
 export default function RevealBadge() {
   return (

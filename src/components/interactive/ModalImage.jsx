@@ -6,7 +6,10 @@ import React, { useState, Fragment } from "react";
 import { Dialog as HeadlessDialog, Transition } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-export default function Modal({ openButton, children, closeButton }) {
+// Icon
+import { MdClose } from "react-icons/md";
+
+export default function ModalImage({ openButton, children }) {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeDialog() {
@@ -29,7 +32,7 @@ export default function Modal({ openButton, children, closeButton }) {
         <HeadlessDialog
           open={isOpen}
           onClose={() => setIsOpen(false)}
-          className="fixed inset-0 z-200 overflow-y-auto"
+          className="fixed inset-0 w-screen h-screen z-200"
         >
           <Transition.Child
             as={Fragment}
@@ -40,8 +43,8 @@ export default function Modal({ openButton, children, closeButton }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            {/* Overlay wrapnutý animací */}
-            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-black bg-opacity-50 z-200" />
+            {/* Overlay */}
+            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-gray-950 bg-opacity-80 z-200" />
           </Transition.Child>
 
           <Transition.Child
@@ -53,19 +56,29 @@ export default function Modal({ openButton, children, closeButton }) {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-90"
           >
-            {/* Obsah modalu - container */}
-            <div className="fixed z-250 top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-md p-8 overflow-hidden bg-background dark:bg-background-200 shadow-lg rounded-xl">
-              {children}
-
-              {/* Tlačítko pro zavření modalu */}
-              <button
-                type="button"
-                onClick={closeDialog}
-                className="mt-8 outline-none"
-              >
-                {closeButton}
-              </button>
+            {/* Obsah modalu - container pro obrázek */}
+            <div className="fixed w-[90%] h-[80%] top-[10%] bottom-[10%] left-[5%] right-[5%] z-250">
+              <div className="modal-image__wrapper-image">{children}</div>
             </div>
+          </Transition.Child>
+
+          <Transition.Child
+            as={Fragment}
+            enter="transition-opacity ease duration-default"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            {/* Tlačítko pro zavření (křížek) */}
+            <button
+              type="button"
+              onClick={closeDialog}
+              className="fixed top-6 right-6 text-4xl text-white p-2 bg-transparent hover:bg-white focus:bg-white hover:bg-opacity-15 focus:bg-opacity-15 transition-colors duration-default rounded-default z-250"
+            >
+              <MdClose />
+            </button>
           </Transition.Child>
         </HeadlessDialog>
       </Transition>
@@ -73,8 +86,7 @@ export default function Modal({ openButton, children, closeButton }) {
   );
 }
 
-Modal.propTypes = {
+ModalImage.propTypes = {
   openButton: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
-  closeButton: PropTypes.node.isRequired,
 };

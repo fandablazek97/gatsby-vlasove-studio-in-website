@@ -1,15 +1,18 @@
+// Vytvořeno pomocí Headless UI
+// Dokumentace ke komponentu: https://headlessui.dev/react/tabs
+
 import React, { Fragment } from "react";
 import { Tab as HeadlessTab } from "@headlessui/react";
 
 function Tabs({ children }) {
   const tabs = children.map((child) => (
-    // Konkrétní Tab (záložka)
+    // Konkrétní Tab
     <HeadlessTab as={Fragment} key={child.props.title}>
       {({ selected }) => (
         <button
           className={`py-3 px-6 font-semibold rounded-default transition duration-default ${
             selected
-              ? "text-default-strong bg-background-300 bg-opacity-70 dark:bg-background-200 dark:bg-opacity-100"
+              ? "text-default-strong bg-background-300 bg-opacity-80 dark:bg-background-200 dark:bg-opacity-100"
               : "text-default opacity-70 hover:text-default-strong hover:opacity-100"
           }`}
         >
