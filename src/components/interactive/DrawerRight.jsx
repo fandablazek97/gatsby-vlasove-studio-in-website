@@ -6,10 +6,9 @@ import React, { useState, Fragment } from "react";
 import { Dialog as HeadlessDialog, Transition } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-export default function Dialog({
+export default function DrawerRight({
   openButton,
-  title,
-  description,
+  children,
   closeButton,
   className = "",
 }) {
@@ -37,35 +36,37 @@ export default function Dialog({
           onClose={() => setIsOpen(false)}
           className="fixed inset-0 z-200 overflow-y-auto"
         >
-          {/* Overlay */}
-          <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen" />
+          <Transition.Child
+            as={Fragment}
+            enter="transition-opacity ease duration-default"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            {/* Overlay wrapnutý animací */}
+            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-gray-950 bg-opacity-70 z-200" />
+          </Transition.Child>
 
           <Transition.Child
             as={Fragment}
-            enter="transition ease duration-default"
-            enterFrom="opacity-0 scale-90"
-            enterTo="opacity-100 scale-100"
-            leave="transition ease duration-200"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-90"
+            enter="transition transform ease duration-600"
+            enterFrom="opacity-0 translate-x-full"
+            enterTo="opacity-100 translate-x-0"
+            leave="transition transform ease duration-400"
+            leaveFrom="opacity-100 translate-x-0"
+            leaveTo="opacity-0 translate-x-full"
           >
             {/* Obsah modalu - container */}
-            <div className="fixed z-250 top-1/2 md:top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-md p-8 overflow-hidden bg-background dark:bg-background-200 shadow-lg rounded-xl">
-              {/* Nadpis */}
-              <HeadlessDialog.Title as="h3" className="ui-heading text-h3">
-                {title}
-              </HeadlessDialog.Title>
-
-              {/* Text */}
-              <HeadlessDialog.Description>
-                {description}
-              </HeadlessDialog.Description>
+            <div className="fixed z-250 top-0 bottom-0 right-0 p-8 w-full h-full md:w-112 max-w-[80vw] md:max-w-none bg-background dark:bg-background-200 shadow-lg overflow-y-auto">
+              {children}
 
               {/* Tlačítko pro zavření modalu */}
               <button
                 type="button"
                 onClick={closeDialog}
-                className="mt-8 outline-none"
+                className="mt-10 outline-none"
               >
                 {closeButton}
               </button>
@@ -77,9 +78,8 @@ export default function Dialog({
   );
 }
 
-Dialog.propTypes = {
+DrawerRight.propTypes = {
   openButton: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   closeButton: PropTypes.node.isRequired,
 };

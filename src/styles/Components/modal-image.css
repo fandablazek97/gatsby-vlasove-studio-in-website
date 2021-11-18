@@ -9,7 +9,14 @@
   justify-content: center;
 
   & > * {
+    width: max-content;
+    height: max-content;
     max-width: 100% !important;
     max-height: 100% !important;
+  }
+
+  & img {
+    z-index: 260;
+    pointer-events: auto;
   }
 }

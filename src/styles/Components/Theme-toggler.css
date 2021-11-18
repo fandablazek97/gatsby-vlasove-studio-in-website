@@ -1,0 +1,55 @@
+.theme-toggler {
+  --tt-icon-size: 1.2rem;
+  --tt-icon-color: var(--color-default-strong);
+  --tt-icon-opacity: 0.8;
+  --tt-radius: var(--radius);
+  --tt-bg: var(--color-default-strong);
+  --tt-bg-initial-opacity: 0;
+  --tt-bg-hover-opacity: 0.1;
+
+  display: inline-flex;
+  width: auto;
+  height: auto;
+
+  & input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsla(var(--tt-bg), var(--tt-bg-initial-opacity));
+    border: none;
+    border-radius: var(--tt-radius);
+
+    width: calc(var(--tt-icon-size) * 2.4);
+    height: calc(var(--tt-icon-size) * 2.4);
+    z-index: 0;
+
+    transition: var(--transition-color), var(--transition-background);
+
+    &:hover {
+      background-color: hsla(var(--tt-bg), var(--tt-bg-hover-opacity));
+    }
+
+    &::before {
+      font-family: "iconfont";
+      content: var(--icon-moon);
+      font-size: var(--tt-icon-size);
+      color: hsla(var(--tt-icon-color), var(--tt-icon-opacity));
+
+      /* Better font rendering */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    &:checked::before {
+      content: var(--icon-sun);
+    }
+  }
+}

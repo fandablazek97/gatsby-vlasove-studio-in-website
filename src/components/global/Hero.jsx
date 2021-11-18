@@ -6,7 +6,7 @@ export default function Hero({ title, subtitle }) {
     <header className="w-screen h-128" role="banner">
       <div className="ui-wrapper-sm h-full flex flex-col justify-center items-center">
         <div className="w-full font-bold text-h5 text-center text-primary mt-20 mb-3">
-          Verze 0.9.2
+          Verze 0.9.3
         </div>
         <h1 className="ui-heading w-full text-center text-3xl sm:text-5xl lg:text-6xl">
           {title}

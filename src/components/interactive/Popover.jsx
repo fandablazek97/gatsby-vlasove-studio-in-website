@@ -15,8 +15,10 @@ export default function Popover({ title, children }) {
       {({ open }) => (
         <Fragment>
           <HeadlessPopover.Button
-            className={`px-6 py-2 inline-flex items-center text-default-strong font-medium bg-background-300 rounded-default ${
-              open ? "bg-background-200" : ""
+            className={`px-6 py-2 inline-flex items-center text-default-strong font-medium rounded-default transition-colors duration-default ${
+              open
+                ? "bg-background-300"
+                : "bg-background-200 hover:bg-background-300"
             }`}
           >
             <span>{title}</span>
@@ -32,7 +34,7 @@ export default function Popover({ title, children }) {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <HeadlessPopover.Panel className="absolute z-10 mt-2 p-5 w-auto min-w-[300px] max-w-sm rounded-default shadow-lg bg-white dark:bg-gray-700">
+            <HeadlessPopover.Panel className="absolute left-1/2 transform -translate-x-1/2 z-10 mt-2 p-5 w-auto min-w-[300px] max-w-sm rounded-default shadow-lg bg-white dark:bg-gray-700">
               {children}
             </HeadlessPopover.Panel>
           </Transition>

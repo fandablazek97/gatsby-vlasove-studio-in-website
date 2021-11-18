@@ -17,6 +17,8 @@ import Popover from "../components/interactive/Popover";
 import Dialog from "../components/interactive/Dialog";
 import Modal from "../components/interactive/Modal";
 import ModalImage from "../components/interactive/ModalImage";
+import DrawerRight from "../components/interactive/DrawerRight";
+import DrawerLeft from "../components/interactive/DrawerLeft";
 
 // Scroll reveal
 import FadeUp from "../libraries/scroll-reveal/FadeUp";
@@ -40,14 +42,6 @@ export default function reactPage() {
         subtitle="Ukázka reálného použití použití připravených react komponentů."
       />
 
-      <div className="ui-wrapper my-28">
-        <FadeUp>
-          <h2 className="ui-heading text-h1 text-center">
-            Scroll reveal animations
-          </h2>
-        </FadeUp>
-      </div>
-
       {/* Slider - swiper js */}
       <div className="ui-wrapper my-28">
         <h2 className="ui-heading text-h2 text-center">Slider - swiper js</h2>
@@ -57,6 +51,14 @@ export default function reactPage() {
           Carousel - swiper js
         </h2>
         <Carousel />
+      </div>
+
+      <div className="ui-wrapper my-28">
+        <FadeUp>
+          <h2 className="ui-heading text-h1 text-center">
+            Scroll reveal animations
+          </h2>
+        </FadeUp>
       </div>
 
       {/* Accordion */}
@@ -162,7 +164,7 @@ export default function reactPage() {
               <span>Otevřít dialog</span>
             </div>
           }
-          title="Dialog"
+          title="Obsah dialogu se vyplňuje přes props"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quam
           blanditiis nostrum illo incidunt quis neque facere error minima
           suscipit explicabo consectetur illum, quos eaque ex labore
@@ -186,10 +188,16 @@ export default function reactPage() {
           }
           closeButton={
             <div className="ui-button" variant="flat-expand">
-              <span>zavřít</span>
+              <span>Zavřít</span>
             </div>
           }
         >
+          <h3 className="ui-heading text-h2">Obsah modalu je libovolný</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+            corporis nemo placeat voluptatibus eius voluptate similique nulla,
+            non ratione corrupti?
+          </p>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
             corporis nemo placeat voluptatibus eius voluptate similique nulla,
@@ -211,13 +219,88 @@ export default function reactPage() {
           <StaticImage
             src="../static/images/italy.jpg"
             alt="Itálie"
-            width="1920"
-            height="1200"
+            width={1920}
+            height={1200}
             objectFit="contain"
             placeholder="blurred"
             loading="lazy"
           />
         </ModalImage>
+        <ModalImage
+          openButton={
+            <div className="ui-button" variant="flat-expand">
+              <span>Otevřít modal Image</span>
+            </div>
+          }
+        >
+          <StaticImage
+            src="../static/images/italy-height.jpg"
+            alt="Itálie"
+            width={1080}
+            height={1920}
+            objectFit="contain"
+            placeholder="blurred"
+            loading="lazy"
+          />
+        </ModalImage>
+      </div>
+
+      {/* Drawer right */}
+      <div className="ui-wrapper-sm my-28 flex flex-col items-center">
+        <h2 className="ui-heading text-h2 text-center">Drawer Right</h2>
+        <DrawerRight
+          openButton={
+            <div className="ui-button" variant="flat-expand">
+              <span>Otevřít pravý drawer</span>
+            </div>
+          }
+          closeButton={
+            <div className="ui-button" variant="flat-expand">
+              <span>Zavřít</span>
+            </div>
+          }
+        >
+          <h3 className="ui-heading text-h2">Obsah draweru je libovolný</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+            corporis nemo placeat voluptatibus eius voluptate similique nulla,
+            non ratione corrupti?
+          </p>
+          <p className="mt-6">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+            corporis nemo placeat voluptatibus eius voluptate similique nulla,
+            non ratione corrupti?
+          </p>
+        </DrawerRight>
+      </div>
+
+      {/* Drawer left */}
+      <div className="ui-wrapper-sm my-28 flex flex-col items-center">
+        <h2 className="ui-heading text-h2 text-center">Drawer Left</h2>
+        <DrawerLeft
+          openButton={
+            <div className="ui-button" variant="flat-expand">
+              <span>Otevřít levý drawer</span>
+            </div>
+          }
+          closeButton={
+            <div className="ui-button" variant="flat-expand">
+              <span>Zavřít</span>
+            </div>
+          }
+        >
+          <h3 className="ui-heading text-h2">Obsah draweru je libovolný</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+            corporis nemo placeat voluptatibus eius voluptate similique nulla,
+            non ratione corrupti?
+          </p>
+          <p className="mt-6">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
+            corporis nemo placeat voluptatibus eius voluptate similique nulla,
+            non ratione corrupti?
+          </p>
+        </DrawerLeft>
       </div>
     </Layout>
   );

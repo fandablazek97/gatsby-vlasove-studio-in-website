@@ -130,6 +130,7 @@ export default function Navbar() {
           aria-controls="mobile-menu-list"
           aria-label="Otevřít menu"
         >
+          <span className="sr-only">Menu</span>
           <div id="opener-1" className="bg-default-strong"></div>
           <div id="opener-2" className="bg-default-strong"></div>
           <div id="opener-3" className="bg-default-strong"></div>

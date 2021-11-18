@@ -20,6 +20,17 @@ module.exports = {
       },
     },
 
+    // Dark mode: https://github.com/wKovacs64/gatsby-plugin-use-dark-mode
+    {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        classNameDark: "dark",
+        classNameLight: "light",
+        storageKey: "darkMode",
+        minify: true,
+      },
+    },
+
     // Anchor links: https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
     {
       resolve: "gatsby-plugin-anchor-links",
@@ -62,8 +73,5 @@ module.exports = {
 
     // Sitemap: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
     "gatsby-plugin-sitemap",
-
-    // Plugin to prevent flash when using use-dark-mode: https://github.com/wKovacs64/gatsby-plugin-use-dark-mode
-    "gatsby-plugin-use-dark-mode",
   ],
 };

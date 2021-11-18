@@ -14,13 +14,11 @@ export default function GdprPolicy({
     <section id="gdpr" className="ui-text">
       <p>
         <strong className="text-xl leading-loose">
-          Ochranu osobních údajů nebereme na lehkou váhu. Považujeme ji za
-          důležitou a nezbytnou součást našich postupů a systémů. V souladu s
-          nařízením Evropského Parlamentu a Rady (EU) 2016/679 o ochraně
-          fyzických osob v souvislosti se zpracováním osobních údajů a o volném
-          pohybu těchto údajů (dále také „GDPR“) a o zrušení směrnice 95/46/ES
-          (obecné nařízení o ochraně osobních údajů) předkládáme následující
-          prohlášení.
+          Ochranu osobních údajů nebereme na lehkou váhu. V souladu s nařízením
+          Evropského Parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v
+          souvislosti se zpracováním osobních údajů a o volném pohybu těchto
+          údajů (dále také „GDPR“) a o zrušení směrnice 95/46/ES (obecné
+          nařízení o ochraně osobních údajů) předkládáme následující prohlášení.
         </strong>
       </p>
 

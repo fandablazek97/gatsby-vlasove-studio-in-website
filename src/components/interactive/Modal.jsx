@@ -6,7 +6,12 @@ import React, { useState, Fragment } from "react";
 import { Dialog as HeadlessDialog, Transition } from "@headlessui/react";
 import PropTypes from "prop-types";
 
-export default function Modal({ openButton, children, closeButton }) {
+export default function Modal({
+  openButton,
+  children,
+  closeButton,
+  className = "",
+}) {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeDialog() {
@@ -20,7 +25,7 @@ export default function Modal({ openButton, children, closeButton }) {
   return (
     <>
       {/* Tlačítko pro otevření */}
-      <button type="button" onClick={openDialog}>
+      <button type="button" onClick={openDialog} className={className}>
         {openButton}
       </button>
 
@@ -41,7 +46,7 @@ export default function Modal({ openButton, children, closeButton }) {
             leaveTo="opacity-0"
           >
             {/* Overlay wrapnutý animací */}
-            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-black bg-opacity-50 z-200" />
+            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-gray-950 bg-opacity-70 z-200" />
           </Transition.Child>
 
           <Transition.Child
@@ -54,14 +59,14 @@ export default function Modal({ openButton, children, closeButton }) {
             leaveTo="opacity-0 scale-90"
           >
             {/* Obsah modalu - container */}
-            <div className="fixed z-250 top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-md p-8 overflow-hidden bg-background dark:bg-background-200 shadow-lg rounded-xl">
+            <div className="fixed z-250 top-1/2 md:top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 max-w-md p-8 bg-background dark:bg-background-200 shadow-lg rounded-xl overflow-y-auto">
               {children}
 
               {/* Tlačítko pro zavření modalu */}
               <button
                 type="button"
                 onClick={closeDialog}
-                className="mt-8 outline-none"
+                className="mt-10 outline-none"
               >
                 {closeButton}
               </button>
