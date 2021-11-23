@@ -16,6 +16,7 @@ export default function ThemeToggler({ className = "" }) {
         type="checkbox"
         checked={darkMode.value}
         onChange={darkMode.toggle}
+        aria-label="zapnout nebo vypnout tmavý vzhled"
       />
     </div>
   );

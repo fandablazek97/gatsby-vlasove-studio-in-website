@@ -10,7 +10,7 @@ import {
 
 export default function SocialIcons() {
   return (
-    <div className="social-icons flex space-x-7 text-2xl text-h2 sm:text-h5 no-underline">
+    <div className="social-icons flex space-x-7 text-2xl md:text-3xl no-underline">
       <a
         href="https://www.instagram.com/reveal.cz/"
         target="blank"

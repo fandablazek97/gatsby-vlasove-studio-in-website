@@ -1,7 +1,7 @@
 import React from "react";
 
 // Logo
-import RevealLogo from "../../static/images/reveal-badge-logo.svg";
+import RevealLogo from "../../static/svg/reveal-badge-logo.svg";
 
 export default function RevealBadge() {
   return (
@@ -9,7 +9,7 @@ export default function RevealBadge() {
       href="https://reveal.cz"
       target="_blank"
       rel="noreferrer author external"
-      className="text-white text-xs tracking-wider font-bold py-3 px-5 rounded-md bg-gray-950 self-center my-2"
+      className="text-white text-xs tracking-wider min-w-[161px] font-bold py-3 px-5 rounded-md bg-gray-950 self-center my-2"
     >
       <img
         src={RevealLogo}

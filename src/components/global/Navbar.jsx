@@ -14,7 +14,7 @@ import SocialIcons from "./SocialIcons";
 import ThemeToggler from "./ThemeToggler";
 
 // Logo značky
-import brand from "../../static/images/brand.svg";
+import brand from "../../static/svg/brand.svg";
 
 export default function Navbar() {
   // Generované odkazy (upravit zde)
