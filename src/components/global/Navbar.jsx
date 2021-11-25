@@ -143,7 +143,7 @@ export default function Navbar() {
           }`}
         >
           <ul
-            className="navbar__menu__list flex flex-col text-center uppercase text-h4 sm:text-h3 space-y-3 mb-10"
+            className="navbar__menu__list flex flex-col text-center uppercase text-xl space-y-5 mb-10"
             id="mobile-menu-list"
           >
             {navLinks.map((link) => (
@@ -161,7 +161,7 @@ export default function Navbar() {
             <li>
               <a
                 href="tel:+420737090913"
-                className="ui-link-3 mt-6 text-h4 sm:text-h3 text-primary font-semibold normal-case"
+                className="ui-link-3 mt-8 text-2xl text-primary font-semibold normal-case"
               >
                 +420 737 090 913
               </a>
@@ -169,7 +169,7 @@ export default function Navbar() {
             <li>
               <a
                 href="mailto:info@reveal.cz"
-                className="ui-link-3 text-h4 sm:text-h3 text-primary font-semibold normal-case"
+                className="ui-link-3 text-2xl text-primary font-semibold normal-case"
               >
                 Info@reveal.cz
               </a>

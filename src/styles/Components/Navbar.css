@@ -17,6 +17,11 @@
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
 }
 
+/* Toggle třída při scrollu - vymazání stínu v tmavém režimu */
+.dark .navbar--is-scrolled {
+  box-shadow: none;
+}
+
 /* Skrýt / Ukázat navbar během scrollování */
 .navbar--hidden {
   transform: translateY(-100%);
