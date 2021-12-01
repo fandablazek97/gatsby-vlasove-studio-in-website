@@ -1,19 +1,19 @@
 @import "Flat.css";
-@import "Flat-slide.css";
-@import "Flat-expand.css";
+/* @import "Flat-slide.css"; */
+/* @import "Flat-expand.css"; */
 @import "Outline.css";
-@import "Outline-slide.css";
-@import "Outline-expand.css";
-@import "Outline-invert.css";
-@import "Text.css";
-@import "Text-invert.css";
-@import "Text-outline.css";
+/* @import "Outline-slide.css"; */
+/* @import "Outline-expand.css"; */
+/* @import "Outline-invert.css"; */
+/* @import "Text.css"; */
+/* @import "Text-invert.css"; */
+/* @import "Text-outline.css"; */
 
-@import "Button-group.css";
+/* @import "Button-group.css"; */
 
 .ui-button {
   --button-default-color: var(--color-primary);
-  --button-text-color: var(--color-light);
+  --button-text-color: var(--color-dark);
   --button-py: 0.8em;
   --button-px: 1.8em;
   --button-font-size: 0.9375rem;
@@ -21,7 +21,7 @@
   --button-letter-spacing: 0.05em;
   --button-font-weight: 600;
   --button-border-width: 2px;
-  --button-border-radius: var(--radius);
+  --button-border-radius: 0;
   --button-icon-size: 1.2em;
   --button-icon-offset: 0.6em;
   --button-hover-overlay-color: black; /* black or white */

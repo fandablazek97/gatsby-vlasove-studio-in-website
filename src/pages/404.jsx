@@ -22,12 +22,7 @@ export default function NotFoundPage() {
             nalézt již neexistuje, nebo byla přesunuta. Kliknutím na tlačítko
             snadno přejdete na hlavní stránku.
           </p>
-          <Link
-            to="/"
-            className="ui-button"
-            variant="flat-expand"
-            data-size="lg"
-          >
+          <Link to="/" className="ui-button" variant="outline" data-size="lg">
             <span>Hlavní stránka</span>
           </Link>
         </div>

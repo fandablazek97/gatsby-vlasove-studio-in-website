@@ -20,17 +20,6 @@ module.exports = {
       },
     },
 
-    // Dark mode: https://github.com/wKovacs64/gatsby-plugin-use-dark-mode
-    {
-      resolve: "gatsby-plugin-use-dark-mode",
-      options: {
-        classNameDark: "dark",
-        classNameLight: "light",
-        storageKey: "darkMode",
-        minify: true,
-      },
-    },
-
     // Anchor links: https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
     {
       resolve: "gatsby-plugin-anchor-links",

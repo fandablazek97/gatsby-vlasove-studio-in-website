@@ -5,21 +5,8 @@
  * Jedná se hlavně o přechody a animace */
 
 .navbar {
-  background-color: transparent;
   will-change: transform, height;
-  transition: background 500ms ease, transform 420ms ease, height 500ms ease,
-    box-shadow 500ms ease;
-}
-
-/* Toggle třída při scrollu */
-.navbar--is-scrolled {
-  height: 5rem !important;
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
-}
-
-/* Toggle třída při scrollu - vymazání stínu v tmavém režimu */
-.dark .navbar--is-scrolled {
-  box-shadow: none;
+  transition: background 500ms ease, transform 420ms ease, height 500ms ease;
 }
 
 /* Skrýt / Ukázat navbar během scrollování */
@@ -41,7 +28,7 @@
 
 /* Třída se aktivuje při kliknutí na hamburger menu */
 .navbar__menu--active {
-  background-color: hsl(var(--color-background));
+  background-color: #1B202C;
   visibility: visible;
   transition: background 280ms ease;
 

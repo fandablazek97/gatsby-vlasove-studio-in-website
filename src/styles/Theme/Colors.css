@@ -6,7 +6,7 @@
  * -> Stránka na převody a skládání barevných palet: `https://coolors.co/` */
 
 :root {
-  --color-primary: 350, 92%, 52%;
+  --color-primary: 44, 28%, 56%;
   --color-secondary: 218, 17%, 35%;
 
   --color-default: 218, 17%, 35%; /* gray 600 */
@@ -27,22 +27,6 @@
 
   --color-light: 204, 45%, 98%; /* gray 50 */
   --color-dark: 233, 17%, 9%; /* gray 950 */
-}
-
-.dark {
-  --color-default: 211, 25%, 84%; /* gray 300 */
-  --color-default-strong: 0, 0%, 100%; /* white */
-  --color-invert: 218, 17%, 35%; /* gray 600 */
-
-  --color-background: 230, 21%, 11%; /* gray 900 */
-  --color-background-100: 223, 24%, 14%; /* gray 800 */
-  --color-background-200: 218, 23%, 23%; /* gray 700 */
-  --color-background-300: 218, 17%, 35%; /* gray 600 */
-
-  --color-success: 158, 64%, 50%;
-  --color-error: 358, 100%, 62%;
-  --color-info: 218, 83%, 62%;
-  --color-warning: 45, 83%, 53%;
 }
 
 /* GRAYS

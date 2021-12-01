@@ -327,6 +327,7 @@ module.exports = {
         purple: colors.purple,
         pink: colors.pink,
         rose: colors.rose,
+        "warm-gray": colors.warmGray,
       },
     },
   },
@@ -336,6 +337,7 @@ module.exports = {
       filter: ["dark"],
       invert: ["dark"],
     },
+    aspectRatio: ["responsive"],
   },
 
   plugins: [require("@tailwindcss/aspect-ratio")],

@@ -41,7 +41,7 @@ body {
   font-weight: var(--base-font-weight);
   line-height: var(--base-line-height);
   font-style: normal;
-  background-color: hsl(var(--color-background-100));
+  background-color: #e7e5e4;
 }
 
 /* Colored selection based on primary color */

@@ -17,7 +17,7 @@ export default function CookiesConsentBar() {
         disableStyles
         disableButtonStyles
         buttonText="Souhlasím"
-        cookieName="cookies"
+        cookieName="vlasovestudioin"
         style={{
           width: "90%",
           maxWidth: "1240px",

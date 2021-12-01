@@ -47,7 +47,7 @@ export default function ModalImage({ openButton, children, className = "" }) {
             leaveTo="opacity-0"
           >
             {/* Overlay */}
-            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-gray-950 bg-opacity-70 z-200" />
+            <HeadlessDialog.Overlay className="fixed inset-0 w-screen h-screen bg-gray-950 bg-opacity-90 z-200" />
           </Transition.Child>
 
           <Transition.Child

@@ -3,6 +3,7 @@
 // zmizí křížek a navigace nejde zavřít -> v podstatě nemá vliv na reálnou funkčnost
 
 import React, { useState, useEffect } from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 
 // Hooks & utils
@@ -11,35 +12,37 @@ import { isBrowser } from "../../hooks/utils/isBrowser";
 
 // Components
 import SocialIcons from "./SocialIcons";
-import ThemeToggler from "./ThemeToggler";
 
 // Logo značky
-import brand from "../../static/svg/brand.svg";
+// import brand from "../../static/svg/brand.svg";
 
 export default function Navbar() {
   // Generované odkazy (upravit zde)
   const navLinks = [
     {
-      path: "/",
-      title: "Domů",
+      path: "/#o-nas",
+      title: "O nás",
     },
     {
-      path: "/revealui",
-      title: "Reveal UI",
+      path: "/#sluzby",
+      title: "Služby",
     },
     {
-      path: "/react",
-      title: "React",
+      path: "/#cenik",
+      title: "Ceník",
     },
     {
-      path: "/contact",
+      path: "/#kadernice",
+      title: "Kadeřnice",
+    },
+    {
+      path: "/#kontakt",
       title: "Kontakt",
     },
   ];
 
   // State
   const [menuOpen, setMenuOpen] = useState(false); // Otevření / zavření menu po kliknutí na burger tlačítko
-  const [navbarScrolled, setNavbarScrolled] = useState(false); // Scrollnutý stav (styl) navigace
   const [navbarVisible, setNavbarVisible] = useState(true); // Skrývá / ukazuje navbar během scrollování
 
   // Přepnutí otevření / zavření menu
@@ -64,13 +67,6 @@ export default function Navbar() {
   const scroll = useScrollListener();
 
   useEffect(() => {
-    // Aktivuje třídu po scrollnutí o více než 60px
-    if (scroll.y > 60) {
-      setNavbarScrolled(true);
-    } else {
-      setNavbarScrolled(false);
-    }
-
     // Skryje / ukáže navigaci na základě podmínky
     if (scroll.y > 540 && scroll.y - scroll.lastY > 0) {
       setNavbarVisible(false);
@@ -82,42 +78,48 @@ export default function Navbar() {
   return (
     <nav
       role="navigation"
-      className={`navbar w-screen h-20 sm:h-28 fixed z-100 top-0 ${
-        navbarScrolled ? "bg-background navbar--is-scrolled" : ""
-      } ${navbarVisible ? "navbar--visible" : "navbar--hidden"}`}
+      className={`navbar bg-gray-800 w-screen h-24 fixed z-100 top-0 ${
+        navbarVisible ? "navbar--visible" : "navbar--hidden"
+      }`}
     >
       {/* Vnitřní wrapper -> vnitřní šířku lze změnit přepsáním velikosti wrapperu zde */}
       <div className="ui-wrapper-lg h-full flex justify-between items-center">
         {/* Logo navigace */}
-        <Link to="/" onClick={menuClose} className="mr-auto w-24 h-10 z-10">
-          <img
-            src={brand}
-            alt="Logo značky"
-            width="96"
-            height="40"
-            className="w-full h-full dark:filter dark:invert"
-          />
+        <Link
+          to="/"
+          onClick={menuClose}
+          className="mr-auto lg:mr-10 xl:mr-16 z-10 font-serif font-light text-left text-xl text-white"
+        >
+          Vlasové studio IN
         </Link>
 
         {/* Hlavní linky desktop navigace */}
-        <ul className="text-sm uppercase space-x-8 xl:space-x-12 hidden lg:flex mr-6 xl:mr-10">
+        <ul className="text-xs xl:text-sm uppercase space-x-6 xl:space-x-8 hidden lg:flex mr-auto">
           {navLinks.map((link) => (
             <li key={link.title}>
-              <Link to={link.path} className="ui-link-2 text-default-strong">
+              <AnchorLink
+                to={link.path}
+                stripHash
+                className="ui-link font-serif font-thin text-gray-200 tracking-widest"
+              >
                 {link.title}
-              </Link>
+              </AnchorLink>
             </li>
           ))}
         </ul>
 
-        <ThemeToggler className="mr-6 xl:mr-10" />
-
-        <a
-          href="tel:+420737090913"
-          className="ui-link-3 text-h4 text-primary hidden lg:inline-flex self-center"
-        >
-          +420 737 090 913
-        </a>
+        <div className="hidden lg:inline-flex items-center">
+          <span className="hidden xl:block text-sm text-gray-200 font-serif uppercase mr-5 tracking-widest">
+            Objednejte se:
+          </span>
+          <a
+            href="tel:+420123456789"
+            className="ui-button text-white self-center"
+            variant="outline"
+          >
+            <span>+420 123 456 789</span>
+          </a>
+        </div>
 
         {/* Burger tlačítko -> viditelné pouze na tabletu a mobilu */}
         <button
@@ -131,14 +133,14 @@ export default function Navbar() {
           aria-label="Otevřít menu"
         >
           <span className="sr-only">Menu</span>
-          <div id="opener-1" className="bg-default-strong"></div>
-          <div id="opener-2" className="bg-default-strong"></div>
-          <div id="opener-3" className="bg-default-strong"></div>
+          <div id="opener-1" className="bg-white"></div>
+          <div id="opener-2" className="bg-white"></div>
+          <div id="opener-3" className="bg-white"></div>
         </button>
 
         {/* Otevírací menu -> pro tablet a telefon */}
         <div
-          className={`navbar__menu w-screen h-screen p-20 pb-40 fixed inset-0 flex flex-col items-center justify-between ${
+          className={`navbar__menu w-screen h-screen p-24 pb-40 fixed inset-0 flex flex-col items-center justify-between ${
             menuOpen ? "navbar__menu--active" : ""
           }`}
         >
@@ -148,30 +150,31 @@ export default function Navbar() {
           >
             {navLinks.map((link) => (
               <li key={link.title}>
-                <Link
+                <AnchorLink
                   to={link.path}
-                  onClick={menuClose}
-                  className="ui-link-2 text-default-strong font-bold"
+                  stripHash
+                  onAnchorLinkClick={menuClose}
+                  className="ui-link-2 text-gray-200 font-bold"
                 >
                   {link.title}
-                </Link>
+                </AnchorLink>
               </li>
             ))}
 
             <li>
               <a
-                href="tel:+420737090913"
-                className="ui-link-3 mt-8 text-2xl text-primary font-semibold normal-case"
+                href="tel:+420123456789"
+                className="ui-link-3 mt-8 text-2xl text-primary font-serif font-thin normal-case"
               >
-                +420 737 090 913
+                +420 123 456 789
               </a>
             </li>
             <li>
               <a
-                href="mailto:info@reveal.cz"
-                className="ui-link-3 text-2xl text-primary font-semibold normal-case"
+                href="mailto:info@vlasovestudioin.cz"
+                className="ui-link-3 text-2xl text-primary font-serif font-thin normal-case"
               >
-                Info@reveal.cz
+                Info@vlasovestudioin.cz
               </a>
             </li>
           </ul>

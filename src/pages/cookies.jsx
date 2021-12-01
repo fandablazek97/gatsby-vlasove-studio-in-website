@@ -11,23 +11,19 @@ import CookiesPolicy from "../components/legal/CookiesPolicy";
 export default function cookiesPage() {
   return (
     <Layout>
-      <Seo
-        title="Hlavní stránka"
-        description="Template pro stránku zpracování osobních údajů. Pro vyplnění údajů klienta stačí přepsat / doplnit props u komponenty GdprText."
-        keywords=""
-      />
+      <Seo title="Zásady používání cookies" description="" keywords="" />
 
       {/* Main content */}
       <Hero title="Zásady používání cookies" />
 
       <div className="ui-wrapper-sm pt-6 pb-32">
         <CookiesPolicy
-          domain="reveal.cz"
-          ownerName="František Blažek"
-          adress="Honezovice 127, 333 01 Stod"
-          ico="06345204"
+          domain="vlasovestudioin.cz"
+          ownerName="Simona Michlová"
+          adress="Plzeň 1, Bolevec, U Velkého rybníka 951/28"
+          ico="71566805"
           validTime="šest měsíců"
-          lastUpdate="10. 11. 2021"
+          lastUpdate="1. 12. 2021"
         />
       </div>
     </Layout>

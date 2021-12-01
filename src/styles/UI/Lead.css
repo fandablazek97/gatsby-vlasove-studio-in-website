@@ -1,6 +1,6 @@
 .ui-lead {
   --lead-font-family: var(--font-sans);
-  --lead-font-size: 1.25rem;
+  --lead-font-size: 1.125rem;
   --lead-max-width: 65ch;
   --lead-font-weight: var(--base-font-weight);
   --lead-line-height: var(--base-line-height);
