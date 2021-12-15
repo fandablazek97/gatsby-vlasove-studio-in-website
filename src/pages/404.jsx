@@ -8,7 +8,12 @@ import Seo from "../base/Seo";
 export default function NotFoundPage() {
   return (
     <Layout>
-      <Seo title="404: Stránka nenalezena" description="" keywords="" />
+      <Seo
+        title="404: Stránka nenalezena"
+        description=""
+        keywords=""
+        robotsEnabled={false}
+      />
 
       {/* Main content */}
       <header className="w-screen h-screen relative min-h-600 bg-background-100">

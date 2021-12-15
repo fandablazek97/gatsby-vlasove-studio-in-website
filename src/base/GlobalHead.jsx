@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 export default function GlobalHead() {
   return (
     <Helmet>
+      <html lang="cs"></html>
       <meta charSet="utf-8" />
       <meta name="author" content="reveal.cz" />
       <meta

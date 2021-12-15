@@ -113,11 +113,11 @@ export default function Navbar() {
             Objednejte se:
           </span>
           <a
-            href="tel:+420123456789"
+            href="tel:+420773999566"
             className="ui-button text-white self-center"
             variant="outline"
           >
-            <span>+420 123 456 789</span>
+            <span>+420 773 999 566</span>
           </a>
         </div>
 

@@ -9,7 +9,7 @@ export default function SocialIcons({ className = "" }) {
       className={`social-icons flex space-x-7 text-2xl no-underline ${className}`}
     >
       <a
-        href="https://www.instagram.com/reveal.cz/"
+        href="https://www.facebook.com/kadernickysalonTWIN"
         target="blank"
         rel="me external"
         aria-label="facebook"
@@ -18,7 +18,7 @@ export default function SocialIcons({ className = "" }) {
         <FaFacebookF aria-label="facebook" />
       </a>
       <a
-        href="https://www.instagram.com/reveal.cz/"
+        href="https://www.instagram.com/vlasovestudio_in/"
         target="blank"
         rel="me external"
         aria-label="instagram"

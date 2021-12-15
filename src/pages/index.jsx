@@ -27,8 +27,8 @@ export default function IndexPage() {
   return (
     <Layout>
       <Seo
-        title="Dámské a pánské kadeřnictví v Plzni | Vlasové Studio IN"
-        description="Dámské a pánské kadeřnictví nabízející kompletní profesionální péči o vaše vlasy. Prodej vlasové kosmetiky Wella a  L'Oréal, slavnostní účesy a mnoho dalšího"
+        title="Dámské a pánské kadeřnictví v Plzni"
+        description="Dámské a pánské kadeřnictví nabízející kompletní profesionální péči o vaše vlasy. Prodej vlasové kosmetiky Wella a L'Oréal, slavnostní účesy a mnoho dalšího"
         keywords="kadernictvi plzen, pansky strih, kadernictvi"
       />
 
@@ -205,7 +205,10 @@ export default function IndexPage() {
           </FadeUp>
           <FadeUp as="p" className="max-w-xl sr-delay-100">
             Ceny nejčastějších služeb naleznete v tabulce. Kompletní nabídku a
-            ceník našich služeb naleznetezde.
+            ceník našich služeb naleznete{" "}
+            <Link to="/cenik" className="ui-link-2 font-normal text-primary">
+              zde.
+            </Link>
           </FadeUp>
         </div>
 
@@ -215,43 +218,52 @@ export default function IndexPage() {
             <hr />
             <div className="w-full flex justify-between items-center">
               <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
-                Název služby 1
+                Pánský střih + mytí a styling
               </span>
-              <span className="text-3xl text-default-strong font-serif font-light">
-                249,-
-              </span>
-            </div>
-            <hr />
-            <div className="w-full flex justify-between items-center">
-              <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
-                Název služby 2
-              </span>
-              <span className="text-3xl text-default-strong font-serif font-light">
-                249,-
+              <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
+                200,-
               </span>
             </div>
             <hr />
             <div className="w-full flex justify-between items-center">
               <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
-                Název služby 3
+                Dámský střih
               </span>
-              <span className="text-3xl text-default-strong font-serif font-light">
-                249,-
+              <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
+                od 450,-
               </span>
             </div>
             <hr />
             <div className="w-full flex justify-between items-center">
               <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
-                Název služby 4
+                Barvení + kompletní úprava
               </span>
-              <span className="text-3xl text-default-strong font-serif font-light">
-                249,-
+              <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
+                od 1100,-
+              </span>
+            </div>
+            <hr />
+            <div className="w-full flex justify-between items-center">
+              <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
+                Melírování + kompletní úprava
+              </span>
+              <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
+                od 1200,-
+              </span>
+            </div>
+            <hr />
+            <div className="w-full flex justify-between items-center">
+              <span className="text-lg text-default-strong font-semibold mb-0 leading-none">
+                Zesvětlování, Baleyage + kompletní úprava
+              </span>
+              <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
+                od 1500,-
               </span>
             </div>
             <hr />
             <Link
-              to="/"
-              className="text-gray-800 text-sm font-semibold uppercase tracking-wider py-4 px-7 mt-6 border-2 border-gray-800 bg-transparent transition-colors duration-default hover:text-white hover:bg-gray-950 a11y-focus text-center"
+              to="/cenik"
+              className="text-gray-800 cursor-pointer text-sm font-semibold uppercase tracking-wider py-4 px-7 mt-6 border-2 border-gray-800 bg-transparent transition-colors duration-default hover:text-white hover:bg-gray-950 a11y-focus text-center"
             >
               Zobrazit kompletní ceník
             </Link>
@@ -497,10 +509,10 @@ export default function IndexPage() {
               className="flex flex-col lg:flex-row lg:sr-delay-200"
             >
               <a
-                href="tel:420123456789"
+                href="tel:420773999566"
                 className="ui-link-3 text-xl text-default-strong font-serif font-light mr-12 mb-5"
               >
-                +420 123 456 789
+                +420 773 999 566
               </a>
               <a
                 href="mailto:info@vlasovestudioin.cz"

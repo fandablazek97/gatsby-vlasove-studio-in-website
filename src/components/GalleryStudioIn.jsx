@@ -29,7 +29,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >
@@ -59,7 +59,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >
@@ -90,7 +90,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >
@@ -121,7 +121,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >
@@ -152,7 +152,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >
@@ -183,7 +183,7 @@ export default function GalleryStudioIn() {
                 placeholder="blurred"
                 loading="lazy"
                 formats={["avif", "webp"]}
-                className="w-full h-full hover:transform hover:scale-110 transition-transform duration-default"
+                className="w-full h-full"
               />
             }
           >

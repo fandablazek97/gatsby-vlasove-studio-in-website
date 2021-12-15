@@ -62,5 +62,8 @@ module.exports = {
 
     // Sitemap: https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap/
     "gatsby-plugin-sitemap",
+
+    // Remove generator tag (security reasons): https://www.gatsbyjs.com/plugins/gatsby-plugin-remove-generator/
+    "gatsby-plugin-remove-generator",
   ],
 };

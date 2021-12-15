@@ -7,11 +7,19 @@ export default function Seo({
   description = "",
   keywords = "",
   thumbnail = "",
+  robotsEnabled = "true",
 }) {
   const siteName = "Vlasové studio IN";
 
   return (
     <Helmet>
+      {/* Robots */}
+      {robotsEnabled ? (
+        <meta name="robots" content="index, follow" />
+      ) : (
+        <meta name="robots" content="noindex" />
+      )}
+
       {/* Global SEO */}
       <title>{`${siteName} | ${title}`}</title>
       <meta name="description" content={description} />

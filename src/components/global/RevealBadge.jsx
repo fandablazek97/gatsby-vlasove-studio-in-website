@@ -3,13 +3,13 @@ import React from "react";
 // Logo
 import RevealLogo from "../../static/svg/reveal-badge-logo.svg";
 
-export default function RevealBadge() {
+export default function RevealBadge({ className }) {
   return (
     <a
       href="https://reveal.cz"
       target="_blank"
       rel="noreferrer author external"
-      className="text-white text-xs tracking-wider min-w-[161px] font-bold py-3 px-5 rounded-md bg-gray-950 self-center my-2"
+      className={`text-white text-xs tracking-wider min-w-[161px] font-bold py-3 px-5 rounded-md bg-gray-950 self-center my-2 ${className}`}
     >
       <img
         src={RevealLogo}

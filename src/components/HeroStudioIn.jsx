@@ -15,7 +15,7 @@ export default function HeroStudioIn() {
           Vlasové studio IN
         </h1>
         <p className="ui-lead text-white">
-          Profesionální pánské a dámské kadeřnické služby a vlasové poradenství
+          Profesionální dámské i pánské kadeřnické služby a vlasové poradenství
           v centru Plzně. Dopřejte svým vlasům tu nejkvalitnější péči. U nás v
           kadeřnictví využíváme nejkvalitnější kosmetiku od značek Wella a
           L’Oréal.
@@ -31,7 +31,7 @@ export default function HeroStudioIn() {
       {/* Socials icons */}
       <div className="flex flex-col space-y-8 absolute bottom-16 xs:bottom-28 sm:bottom-16 right-8 md:right-12 lg:right-16 z-20">
         <a
-          href="https://reveal.cz"
+          href="https://www.facebook.com/kadernickysalonTWIN"
           target="_blank"
           rel="noreferrer me external"
           aria-label="facebook"
@@ -40,7 +40,7 @@ export default function HeroStudioIn() {
           <FaFacebookF />
         </a>
         <a
-          href="https://reveal.cz"
+          href="https://www.instagram.com/vlasovestudio_in/"
           target="_blank"
           rel="noreferrer me external"
           aria-label="instagram"

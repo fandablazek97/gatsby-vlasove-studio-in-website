@@ -13,6 +13,10 @@
 @layer utilities {
   @variants responsive {
     /* Delay */
+    .sr-delay-0 {
+      --sr-delay: 0ms;
+    }
+
     .sr-delay-100 {
       --sr-delay: 100ms;
     }

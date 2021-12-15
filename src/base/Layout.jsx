@@ -13,7 +13,7 @@ import "../styles/Main.css";
 // Components
 import GlobalHead from "./GlobalHead";
 import Navbar from "../components/global/Navbar";
-import CookiesConsentBar from "../components/legal/CookiesConsentBar";
+// import CookiesConsentBar from "../components/legal/CookiesConsentBar";
 import Footer from "../components/global/Footer";
 
 export default function Layout({ children }) {
@@ -22,7 +22,6 @@ export default function Layout({ children }) {
       <GlobalHead />
       <Navbar />
       <main>{children}</main>
-      <CookiesConsentBar />
       <Footer />
     </>
   );
