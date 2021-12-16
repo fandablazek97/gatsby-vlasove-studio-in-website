@@ -163,10 +163,10 @@ export default function Navbar() {
 
             <li>
               <a
-                href="tel:+420123456789"
+                href="tel:+420773999566"
                 className="ui-link-3 mt-8 text-2xl text-primary font-serif font-thin normal-case"
               >
-                +420 123 456 789
+                +420 773 999 566
               </a>
             </li>
             <li>

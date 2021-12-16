@@ -65,7 +65,7 @@ export default function IndexPage() {
             Kadeřnictví se nachází v novém a moderním prostředí, kde se o vás
             postará tým profesionálních kadeřnic. U nás se snoubí dlouholetá
             praxe s moderním a individuálním přístupem a proto se k nám naši
-            klientky a klienti rádi vrací. Přidejte se k nim.
+            klienti a klientky rádi vrací. Přidejte se k nim.
           </FadeUp>
           <FadeUp
             as="div"
@@ -130,7 +130,7 @@ export default function IndexPage() {
                 </h3>
                 <p className="text-sm">
                   Vyhotovíme Vám účes přímo podle přestav. Snažíme se vytvořit
-                  střih, který je perfektní jak při odchodu z kadeřnictví ,tak i
+                  střih, který je perfektní jak při odchodu z kadeřnictví, tak i
                   při každodenní domácí péči.
                 </p>
               </FadeUp>
@@ -167,7 +167,7 @@ export default function IndexPage() {
                 </h3>
                 <p className="text-sm">
                   Rádi Vám poskytneme poradenství ohledně volby střihu, vlasové
-                  kosmetiky nebo péče o vlasy. Rádi s Vámi probereme přání i
+                  kosmetiky nebo péče o vlasy. Probereme s Vámi přání i
                   představu o jakémkoliv účesu.
                 </p>
               </FadeUp>
@@ -308,7 +308,7 @@ export default function IndexPage() {
           </FadeUp>
           <FadeUp as="p" className="max-w-xl sr-delay-100">
             Postará se o Vás tým profesionálních kadeřnic. Stačí si pouze
-            rezervovat svůj termín a o ostatní se postaráme my.
+            rezervovat svůj termín a ostatní nechte na nás.
           </FadeUp>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10 md:gap-16 mt-20">

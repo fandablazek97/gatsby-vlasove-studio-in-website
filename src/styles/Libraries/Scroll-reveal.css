@@ -4,7 +4,6 @@
   --sr-translate-distance: 4rem;
   --sr-delay: 0ms;
 
-  will-change: transform, opacity;
   transform-origin: 50% 50%;
   transition: opacity var(--sr-duration) var(--sr-easing) var(--sr-delay),
     transform var(--sr-duration) var(--sr-easing) var(--sr-delay);
