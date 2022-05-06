@@ -72,7 +72,7 @@ export default function cenikPage() {
               Barvení + kompletní úprava
             </span>
             <span className="text-2xl md:text-3xl text-default-strong font-serif font-light whitespace-nowrap ml-5">
-              od 110,-
+              od 1100,-
             </span>
           </div>
           <hr />

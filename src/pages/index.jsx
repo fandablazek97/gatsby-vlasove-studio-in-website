@@ -327,7 +327,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Simona</div>
               <a
-                href="tel:420123456789"
+                href="tel:+420777227440"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 777 227 440
@@ -348,7 +348,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Aneta</div>
               <a
-                href="tel:420775210397"
+                href="tel:+420775210397"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 775 210 397
@@ -369,7 +369,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Ivana</div>
               <a
-                href="tel:420777635293"
+                href="tel:+420777635293"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 777 635 293
@@ -393,7 +393,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Jiřina</div>
               <a
-                href="tel:420123456789"
+                href="tel:+420773099336"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 773 099 336
@@ -417,7 +417,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Lucka</div>
               <a
-                href="tel:420734676730"
+                href="tel:+420734676730"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 734 676 730
@@ -441,7 +441,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Martina</div>
               <a
-                href="tel:420123456789"
+                href="tel:+420702190655"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 702 190 655
@@ -462,7 +462,7 @@ export default function IndexPage() {
               />
               <div className="ui-heading text-h4">Monika</div>
               <a
-                href="tel:420123456789"
+                href="tel:+420603922696"
                 className="ui-link-3 text-xl font-serif font-light"
               >
                 +420 603 922 696
@@ -509,7 +509,7 @@ export default function IndexPage() {
               className="flex flex-col lg:flex-row lg:sr-delay-200"
             >
               <a
-                href="tel:420773999566"
+                href="tel:+420773999566"
                 className="ui-link-3 text-xl text-default-strong font-serif font-light mr-12 mb-5"
               >
                 +420 773 999 566
